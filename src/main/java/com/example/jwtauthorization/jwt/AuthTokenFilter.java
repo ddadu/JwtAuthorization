@@ -1,6 +1,6 @@
 package com.example.jwtauthorization.jwt;
 
-import com.example.jwtauthorization.config.service.UserDetailsServiceImp;
+import com.example.jwtauthorization.service.UserDetailsServiceImp;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.context.SecurityContextHolder;
@@ -44,7 +44,7 @@ public class AuthTokenFilter extends OncePerRequestFilter {
     private String parseJwt(HttpServletRequest request){
         String headerAuth = request.getHeader("Authorization");
         if (StringUtils.hasText(headerAuth) && headerAuth.startsWith("Bearer")){
-            return headerAuth.substring(7,headerAuth.length());
+            return headerAuth.substring(7, headerAuth.length());
         }
         return null;
     }

@@ -1,6 +1,6 @@
 package com.example.jwtauthorization.jwt;
 
-import com.example.jwtauthorization.config.service.UserDetailsImpl;
+import com.example.jwtauthorization.service.UserDetailsImpl;
 import io.jsonwebtoken.*;
 import org.springframework.beans.factory.annotation.Value;
 import org.slf4j.Logger;
@@ -14,7 +14,7 @@ import java.util.Date;
 public class JwtUtils {
     private static final Logger logger = LoggerFactory.getLogger(JwtUtils.class);
     @Value("${example.app.jwtSecret}")
-    private String JwtSecret;
+    private String jwtSecret;
     @Value("${example.app.jwtExpirationMs}")
     private int jwtExpirationMs;
     public String generateJwtToken(Authentication authentication){

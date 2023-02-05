@@ -1,4 +1,4 @@
-package com.example.jwtauthorization.config.service;
+package com.example.jwtauthorization.service;
 
 import com.example.jwtauthorization.entity.User;
 import com.fasterxml.jackson.annotation.JsonIgnore;
