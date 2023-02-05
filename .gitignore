@@ -18,6 +18,9 @@ target/
 *.iws
 *.iml
 *.ipr
+docker-compose.yml/
+pom.xml/
+
 
 ### NetBeans ###
 /nbproject/private/
